@@ -60,10 +60,19 @@ export default function Projects() {
               style={{ transitionDelay: `${idx * 60}ms` }}
               onClick={() => setOpenProject(p)}
             >
-              <div
-                className="project-tile-visual"
-                dangerouslySetInnerHTML={{ __html: generateSVG(p) }}
-              />
+              {p.coverUrl ? (
+                <img
+                  src={p.coverUrl}
+                  alt={p.title[lang]}
+                  className="project-tile-visual"
+                  style={{ objectFit: 'cover' }}
+                />
+              ) : (
+                <div
+                  className="project-tile-visual"
+                  dangerouslySetInnerHTML={{ __html: generateSVG(p) }}
+                />
+              )}
               <div className="project-tile-meta">
                 <div>
                   <h3 className="project-tile-title">{p.title[lang]}</h3>

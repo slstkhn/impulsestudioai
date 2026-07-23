@@ -143,6 +143,7 @@ export interface Project {
   videoUrl?: string                 // прямая ссылка на mp4 (Cloudflare R2, Vercel Blob, etc.)
   vimeoId?: string                  // ID видео на Vimeo (например: '988029517')
   posterUrl?: string                // картинка-превью до запуска видео
+  coverUrl?: string                 // обложка для карточки проекта
   description?: Record<Lang, string>// описание проекта
   client?: Record<Lang, string>     // заказчик / площадка
 }
@@ -151,6 +152,7 @@ export const projects: Project[] = [
   { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2026, catLabel: { ru: 'Нейровидео',   en: 'AI Video'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
     // Вставьте сюда ID вашего загруженного видео с Vimeo
     vimeoId: '1211691292', // Замените на ваш ID
+    coverUrl: '/becker-cover.jpg', // <--- Загрузите ваше фото в папку public с таким именем
     description: {
       ru: 'Имиджевый коммерческий ролик для кухонной фабрики Becker. Главная задача — объединить эстетику, фотореализм и понятный визуальный нарратив. Проект реализован под ключ всего за 10 дней.',
       en: 'Commercial brand video for Becker Kitchen Factory. The main goal was to combine aesthetics, photorealism, and a clear visual narrative. Full production cycle completed in just 10 days.',

@@ -11,7 +11,7 @@ import { generateSVG, projects, Project } from '@/lib/data'
 const TICKER_KEYS = ['tick_1','tick_2','tick_3','tick_4','tick_5']
 
 export default function Home() {
-  const { t } = useApp()
+  const { t, lang } = useApp()
   const [openProject, setOpenProject] = useState<Project | null>(null)
   useReveal()
   const featured = [projects[0], projects[1]]
@@ -100,10 +100,19 @@ export default function Home() {
                 <div className="work-visual">
                   <span className="work-tag">{t(`w${i+1}_tag`)}</span>
                   <span className="work-year">{p.year}</span>
-                  <div
-                    className="work-visual-inner"
-                    dangerouslySetInnerHTML={{ __html: generateSVG(p) }}
-                  />
+                  {p.coverUrl ? (
+                    <img 
+                      src={p.coverUrl} 
+                      alt={p.title[lang]} 
+                      className="work-visual-inner"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  ) : (
+                    <div
+                      className="work-visual-inner"
+                      dangerouslySetInnerHTML={{ __html: generateSVG(p) }}
+                    />
+                  )}
                 </div>
                 <div className="work-meta">
                   <div>
