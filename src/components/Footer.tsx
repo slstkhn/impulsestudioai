@@ -27,22 +27,18 @@ export default function Footer() {
             <li><a href="/contact">{t('s1_name')}</a></li>
             <li><a href="/contact">{t('s2_name')}</a></li>
             <li><a href="/contact">{t('s3_name')}</a></li>
-            <li><a href="/contact">{t('s4_name')}</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>{t('f_social')}</h4>
-          <div className="social-grid">
+          <ul>
             {[
               ['Instagram', 'https://instagram.com'],
               ['Telegram',  'https://t.me'],
-              ['Max',       'https://max.ru'],
-              ['Dribbble',  'https://dribbble.com'],
-              ['Vimeo',     'https://vimeo.com'],
             ].map(([name, href]) => (
-              <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="social-link">{name}</a>
+              <li key={name}><a href={href} target="_blank" rel="noopener noreferrer">{name}</a></li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
       <div className="footer-bottom">

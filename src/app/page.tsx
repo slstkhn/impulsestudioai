@@ -8,7 +8,7 @@ import Loader from '@/components/Loader'
 import ProjectModal from '@/components/ProjectModal'
 import { generateSVG, projects, Project } from '@/lib/data'
 
-const TICKER_KEYS = ['tick_1','tick_2','tick_3','tick_4','tick_5']
+const TICKER_KEYS = ['tick_1','tick_2','tick_3','tick_5']
 
 export default function Home() {
   const { t, lang } = useApp()
@@ -69,7 +69,6 @@ export default function Home() {
               { num:'01', nameKey:'s1_name', italic:true,  descKey:'s1_desc' },
               { num:'02', nameKey:'s2_name', italic:false, descKey:'s2_desc' },
               { num:'03', nameKey:'s3_name', italic:true,  descKey:'s3_desc' },
-              { num:'04', nameKey:'s4_name', italic:false, descKey:'s4_desc' },
             ].map(s => (
               <div key={s.num} className="service reveal">
                 <span className="service-num">{s.num}</span>
