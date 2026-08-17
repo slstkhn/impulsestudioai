@@ -116,7 +116,7 @@ export default function Home() {
                 <div className="work-meta">
                   <div>
                     <h3 className="work-title">
-                      {i === 0 ? <>{t('w1_title')}<em>Becker</em></> : <><em>{t('w2_title_em')}</em>{t('w2_title')}</>}
+                      {i === 0 ? <>{t('w1_title')}<em>Becker</em></> : <>{t('w2_title')}<em>{t('w2_title_em')}</em></>}
                     </h3>
                     <span className="work-client">{t(`w${i+1}_client`)}</span>
                   </div>

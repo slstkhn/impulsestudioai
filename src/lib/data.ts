@@ -36,8 +36,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     work_title_em: 'работы',
     work_all: 'Все проекты →',
     work_cta: 'Все проекты',
-    w1_tag: 'Нейровидео', w1_title: 'Кухонная фабрика ', w1_client: 'Becker · Реклама', w1_link: 'Смотреть →',
-    w2_tag: 'Короткий метр', w2_title_em: 'Echo', w2_title: ' — ретро-фьюче', w2_client: 'Личный проект · 11 сцен', w2_link: 'Смотреть →',
+    w1_tag: 'ВИДЕОВИЗИТКА', w1_title: 'Кухонная фабрика ', w1_client: 'Видеовизитка', w1_link: 'Смотреть →',
+    w2_tag: 'Реклама', w2_title_em: 'GERMES', w2_title: 'Футбольный клуб ', w2_client: 'Реклама', w2_link: 'Смотреть →',
     proc_label: 'Как работаем',
     proc_title_1: 'Процесс',
     proc_title_em: 'в четыре такта',
@@ -67,7 +67,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     ct_name: 'Имя', ct_contact: 'Email или Telegram', ct_service: 'Что интересует',
     ct_tag1: 'Нейровидео', ct_tag2: 'Сайт', ct_tag3: 'Презентация', ct_tag4: 'Приложение', ct_tag5: 'Другое',
     ct_msg: 'Расскажите о проекте', ct_send: 'Отправить', ct_sent: 'Отправлено ✓',
-    f_tagline: 'Нейростудия полного цикла. Создаём видео, сайты, презентации и приложения с помощью AI и человеческого вкуса.',
+    f_tagline: 'Нейростудия полного цикла. Создаём видео, сайты, презентации с помощью AI и человеческого вкуса.',
     f_nav: 'Навигация', f_serv: 'Услуги', f_social: 'Соцсети',
     f_rights: '— Все права защищены', f_live: 'Принимаем проекты', f_built: 'Сделано с любовью и нейросетями',
   },
@@ -95,8 +95,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     s4_desc: 'Mobile and web apps powered by AI pipelines. From idea and UX to working MVP in weeks.',
     work_label: 'Featured', work_title_1: 'Recent', work_title_em: 'work',
     work_all: 'All projects →', work_cta: 'All projects',
-    w1_tag: 'AI Video', w1_title: 'Kitchen Factory ', w1_client: 'Becker · Commercial', w1_link: 'View →',
-    w2_tag: 'Short Film', w2_title_em: 'Echo', w2_title: ' — retro-future', w2_client: 'Personal · 11 scenes', w2_link: 'View →',
+    w1_tag: 'PROMO', w1_title: 'Kitchen Factory ', w1_client: 'Promo', w1_link: 'View →',
+    w2_tag: 'Commercial', w2_title_em: 'GERMES', w2_title: 'Football Club ', w2_client: 'Commercial', w2_link: 'View →',
     proc_label: 'How we work', proc_title_1: 'Process', proc_title_em: 'in four beats',
     p1_title: 'Brief', p1_text: 'We map the task, audience, references. Pin down goals and metrics.',
     p2_title: 'Concept', p2_text: 'Visual language, storyline, storyboard. Approved before production.',
@@ -121,7 +121,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     ct_name: 'Name', ct_contact: 'Email or Telegram', ct_service: "What's on the table",
     ct_tag1: 'AI Video', ct_tag2: 'Website', ct_tag3: 'Deck', ct_tag4: 'App', ct_tag5: 'Other',
     ct_msg: 'Tell us about it', ct_send: 'Send', ct_sent: 'Sent ✓',
-    f_tagline: 'Full-cycle neurostudio. We craft videos, websites, decks and apps with AI and human taste.',
+    f_tagline: 'Full-cycle neurostudio. We craft videos, websites, decks with AI and human taste.',
     f_nav: 'Navigation', f_serv: 'Services', f_social: 'Social',
     f_rights: '— All rights reserved', f_live: 'Taking on projects', f_built: 'Made with love and neural nets',
   },
@@ -149,17 +149,17 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2026, catLabel: { ru: 'Нейровидео',   en: 'AI Video'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
+  { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2025, catLabel: { ru: 'ВИДЕОВИЗИТКА',   en: 'PROMO'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
     // Вставьте сюда ID вашего загруженного видео с Vimeo
     vimeoId: '1211691292', // Замените на ваш ID
-    coverUrl: '/becker-cover.jpg', // <--- Загрузите ваше фото в папку public с таким именем
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/untitled_ChatGPT%20Images%202.0%20Edit_2026-08-17_17-22-58.png?raw=true',
     description: {
       ru: 'Имиджевый коммерческий ролик для кухонной фабрики Becker. Главная задача — объединить эстетику, фотореализм и понятный визуальный нарратив. Проект реализован под ключ всего за 10 дней.',
       en: 'Commercial brand video for Becker Kitchen Factory. The main goal was to combine aesthetics, photorealism, and a clear visual narrative. Full production cycle completed in just 10 days.',
     },
     client: { ru: 'Becker · Реклама', en: 'Becker · Commercial' },
   },
-  { id: 2,  title: { ru: 'Echo · агент 007',   en: 'Echo · agent 007' }, cat: 'video', year: 2025, catLabel: { ru: 'Короткий метр', en: 'Short Film'  }, grad: ['#0d1117','#1a1a2e'], accent: '#8b7355', type: 'frame'   },
+  { id: 2,  title: { ru: 'Футбольный клуб GERMES',   en: 'Football Club GERMES' }, cat: 'video', year: 2026, vimeoId: '1219025417', catLabel: { ru: 'Реклама', en: 'Commercial'  }, grad: ['#0d1117','#1a1a2e'], accent: '#8b7355', type: 'frame', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/untitled_ChatGPT%20Images%202.0%20Edit_2026-08-17_20-06-31.png?raw=true' },
   { id: 3,  title: { ru: 'Наследник',          en: 'The Heir'         }, cat: 'video', year: 2025, catLabel: { ru: 'Трейлер',       en: 'Trailer'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust'    },
   { id: 4,  title: { ru: 'BioPeel',            en: 'BioPeel'          }, cat: 'video', year: 2024, catLabel: { ru: 'Реклама',        en: 'Commercial'  }, grad: ['#0f2027','#1a3a4a'], accent: '#7ec8a8', type: 'bubble'  },
   { id: 5,  title: { ru: 'Волшебные брызги',   en: 'Magic Splashes'   }, cat: 'video', year: 2024, catLabel: { ru: 'Анимация',       en: 'Animation'   }, grad: ['#2d1b3d','#5a3a7a'], accent: '#ffc0cb', type: 'splash'  },
