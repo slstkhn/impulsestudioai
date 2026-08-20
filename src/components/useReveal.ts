@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react'
 
-export function useReveal() {
+export function useReveal(deps: any[] = []) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -14,7 +14,15 @@ export function useReveal() {
       },
       { threshold: 0.12, rootMargin: '0px 0px -50px 0px' }
     )
-    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+
+    // Small delay to allow React to mount/update the DOM before querying
+    const timeout = setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el))
+    }, 50)
+
+    return () => {
+      clearTimeout(timeout)
+      observer.disconnect()
+    }
+  }, deps)
 }

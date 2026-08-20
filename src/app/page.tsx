@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useApp } from '@/lib/context'
 import { useReveal } from '@/components/useReveal'
 import Nav from '@/components/Nav'
@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import Loader from '@/components/Loader'
 import ProjectModal from '@/components/ProjectModal'
 import { generateSVG, projects, Project } from '@/lib/data'
+import { BeckerLogo, UtkonosLogo, ServierLogo, GermesLogo, NovyeLyudiLogo, UnisonLogo, EsimetaLogo } from '@/components/ClientLogos'
 
 const TICKER_KEYS = ['tick_1','tick_2','tick_3','tick_5']
 
@@ -130,6 +131,22 @@ export default function Home() {
               <span>{t('work_cta')}</span>
               <span className="arrow">→</span>
             </a>
+          </div>
+        </section>
+
+        <section className="clients-ticker">
+          <div className="clients-ticker-track">
+            {[...Array(4)].map((_, i) => (
+              <React.Fragment key={i}>
+                <div className="clients-ticker-item"><BeckerLogo /></div>
+                <div className="clients-ticker-item"><UtkonosLogo /></div>
+                <div className="clients-ticker-item"><ServierLogo /></div>
+                <div className="clients-ticker-item"><GermesLogo /></div>
+                <div className="clients-ticker-item"><NovyeLyudiLogo /></div>
+                <div className="clients-ticker-item"><UnisonLogo /></div>
+                <div className="clients-ticker-item"><EsimetaLogo /></div>
+              </React.Fragment>
+            ))}
           </div>
         </section>
 

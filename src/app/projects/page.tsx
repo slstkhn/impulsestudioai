@@ -15,7 +15,6 @@ const FILTERS: { key: Filter; labelKey: string }[] = [
   { key: 'video', labelKey: 'f_video' },
   { key: 'web',   labelKey: 'f_web'   },
   { key: 'deck',  labelKey: 'f_deck'  },
-  { key: 'app',   labelKey: 'f_app'   },
 ]
 
 export default function Projects() {
@@ -23,9 +22,11 @@ export default function Projects() {
   const [filter, setFilter] = useState<Filter>('all')
   const [openProject, setOpenProject] = useState<Project | null>(null)
 
-  useReveal()
+  useReveal([filter])
 
-  const filtered = filter === 'all' ? projects : projects.filter(p => p.cat === filter)
+  const rawFiltered = filter === 'all' ? projects : projects.filter(p => p.cat === filter)
+  const isPlaceholder = filter === 'web' || filter === 'deck'
+  const filtered = isPlaceholder ? [] : rawFiltered
 
   return (
     <>
@@ -49,11 +50,25 @@ export default function Projects() {
               {t(f.labelKey)}
             </button>
           ))}
-          <span className="filter-count">{filtered.length} {t('f_count')}</span>
+          <span className="filter-count">{isPlaceholder ? 0 : filtered.length} {t('f_count')}</span>
         </div>
 
-        <div className="projects-grid">
-          {filtered.map((p, idx) => (
+        {isPlaceholder ? (
+          <div className="projects-placeholder">
+            <div className="hero-bg" style={{ opacity: 0.3 }}><div className="hero-orb" style={{ width: '400px', height: '400px' }} /></div>
+            <div className="placeholder-content reveal" style={{ position: 'relative', zIndex: 1 }}>
+              <h3>{t('placeholder_title')}</h3>
+              <p>{t('placeholder_desc')}</p>
+              <div style={{ marginTop: '2.5rem' }}>
+                <button onClick={() => setFilter('all')} className="btn-ghost">
+                  {t('f_all')} →
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="projects-grid">
+            {filtered.map((p, idx) => (
             <article
               key={p.id}
               className="project-tile reveal"
@@ -83,6 +98,7 @@ export default function Projects() {
             </article>
           ))}
         </div>
+        )}
       </main>
       <Footer />
       <ProjectModal project={openProject} onClose={() => setOpenProject(null)} />

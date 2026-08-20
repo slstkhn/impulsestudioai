@@ -14,34 +14,33 @@ export default function About() {
       <Loader />
       <Nav />
       <main className="page-wrapper">
-        <section className="about-hero">
-          <div className="about-hero-inner reveal">
-            <h1><span>{t('ab_h_1')} </span><em>{t('ab_h_em')}</em></h1>
-            <p>{t('ab_h_desc')}</p>
+        <section className="about-hero reveal">
+          <h1 className="about-hero-title"><span>{t('ab_h_1')} </span><em>{t('ab_h_em')}</em></h1>
+          <p className="about-hero-text">{t('ab_h_desc')}</p>
+        </section>
+
+        <section className="manifesto">
+          <div className="manifesto-inner reveal">
+            <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--ink-dim)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>
+              {t('ab_sec1_title')}
+            </h2>
+            <div className="about-hero-text" style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>{t('ab_sec1_text1')}</div>
+            <div className="about-hero-text" style={{ fontSize: '1.25rem' }}>{t('ab_sec1_text2')}</div>
           </div>
         </section>
 
-        <section className="about-content">
-          <div className="about-grid reveal">
-            <div className="about-text">
-              <h2>{t('ab_sec1_title')}</h2>
-              <p>{t('ab_sec1_text1')}</p>
-              <p>{t('ab_sec1_text2')}</p>
-            </div>
-            <div className="about-stats">
-              <div className="stat">
-                <strong>50+</strong>
-                <span>{t('ab_stat1')}</span>
-              </div>
-              <div className="stat">
-                <strong>12</strong>
-                <span>{t('ab_stat2')}</span>
-              </div>
-              <div className="stat">
-                <strong>5</strong>
-                <span>{t('ab_stat3')}</span>
-              </div>
-            </div>
+        <section className="stats reveal">
+          <div className="stat">
+            <div className="stat-num">50<em>+</em></div>
+            <div className="stat-label">{t('ab_stat1')}</div>
+          </div>
+          <div className="stat">
+            <div className="stat-num">12</div>
+            <div className="stat-label">{t('ab_stat2')}</div>
+          </div>
+          <div className="stat">
+            <div className="stat-num">5</div>
+            <div className="stat-label">{t('ab_stat3')}</div>
           </div>
         </section>
       </main>

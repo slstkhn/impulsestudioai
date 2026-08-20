@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 import Loader from '@/components/Loader'
 import { useReveal } from '@/components/useReveal'
 
-const SERVICE_TAGS = ['ct_tag1','ct_tag2','ct_tag3','ct_tag4','ct_tag5']
+const SERVICE_TAGS = ['ct_tag1','ct_tag2','ct_tag3','ct_tag5']
 
 export default function Contact() {
   const { t } = useApp()
@@ -46,14 +46,14 @@ export default function Contact() {
             </div>
           ) : (
             <form className="contact-form reveal" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label>{t('ct_lbl_services')}</label>
-                <div className="tags-grid">
+              <div className="form-row">
+                <label className="form-label">{t('ct_lbl_services')}</label>
+                <div className="form-tags">
                   {SERVICE_TAGS.map(tag => (
                     <button
                       key={tag}
                       type="button"
-                      className={`tag-btn ${selected.has(tag) ? 'active' : ''}`}
+                      className={`tag-check ${selected.has(tag) ? 'selected' : ''}`}
                       onClick={() => toggle(tag)}
                     >
                       {t(tag)}
@@ -62,25 +62,24 @@ export default function Contact() {
                 </div>
               </div>
 
+              <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                <div>
+                  <label className="form-label">{t('ct_lbl_name')}</label>
+                  <input type="text" className="form-input" required placeholder={t('ct_ph_name')} />
+                </div>
+                <div>
+                  <label className="form-label">{t('ct_lbl_email')}</label>
+                  <input type="email" className="form-input" required placeholder={t('ct_ph_email')} />
+                </div>
+              </div>
+
               <div className="form-row">
-                <div className="form-group">
-                  <label>{t('ct_lbl_name')}</label>
-                  <input type="text" required placeholder={t('ct_ph_name')} />
-                </div>
-                <div className="form-group">
-                  <label>{t('ct_lbl_email')}</label>
-                  <input type="email" required placeholder={t('ct_ph_email')} />
-                </div>
+                <label className="form-label">{t('ct_lbl_msg')}</label>
+                <textarea className="form-textarea" rows={4} placeholder={t('ct_ph_msg')}></textarea>
               </div>
 
-              <div className="form-group">
-                <label>{t('ct_lbl_msg')}</label>
-                <textarea rows={4} placeholder={t('ct_ph_msg')}></textarea>
-              </div>
-
-              <button type="submit" className="btn-primary">
-                <span>{t('ct_btn_send')}</span>
-                <span className="arrow">→</span>
+              <button type="submit" className="form-submit">
+                {t('ct_btn_send')} →
               </button>
             </form>
           )}
