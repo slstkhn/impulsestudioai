@@ -164,15 +164,15 @@ export const projects: Project[] = [
   { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2025, catLabel: { ru: 'ВИДЕОВИЗИТКА',   en: 'PROMO'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
     // Вставьте сюда ID вашего загруженного видео с Vimeo
     vimeoId: '1211691292', // Замените на ваш ID
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/untitled_ChatGPT%20Images%202.0%20Edit_2026-08-17_17-22-58.png?raw=true',
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.37.jpeg?raw=true',
     description: {
       ru: 'Имиджевый коммерческий ролик для кухонной фабрики Becker. Главная задача — объединить эстетику, фотореализм и понятный визуальный нарратив. Проект реализован под ключ всего за 10 дней.',
       en: 'Commercial brand video for Becker Kitchen Factory. The main goal was to combine aesthetics, photorealism, and a clear visual narrative. Full production cycle completed in just 10 days.',
     },
     client: { ru: 'Becker · Реклама', en: 'Becker · Commercial' },
   },
-  { id: 2,  title: { ru: 'Футбольный клуб GERMES',   en: 'Football Club GERMES' }, cat: 'video', year: 2026, vimeoId: '1219025417', catLabel: { ru: 'Реклама', en: 'Commercial'  }, grad: ['#0d1117','#1a1a2e'], accent: '#8b7355', type: 'frame', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/untitled_ChatGPT%20Images%202.0%20Edit_2026-08-17_20-06-31.png?raw=true' },
-  { id: 3,  title: { ru: 'Партия Новые люди',          en: 'New People Party'         }, cat: 'video', year: 2025, vimeoId: '1219493729', catLabel: { ru: 'Деморолик',       en: 'Demo reel'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BB%D1%8E%D0%B4%D0%B8.png?raw=true' },
+  { id: 2,  title: { ru: 'Футбольный клуб GERMES',   en: 'Football Club GERMES' }, cat: 'video', year: 2026, vimeoId: '1219025417', catLabel: { ru: 'Реклама', en: 'Commercial'  }, grad: ['#0d1117','#1a1a2e'], accent: '#8b7355', type: 'frame', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.39.jpeg?raw=true' },
+  { id: 3,  title: { ru: 'Партия Новые люди',          en: 'New People Party'         }, cat: 'video', year: 2025, vimeoId: '1219493729', catLabel: { ru: 'Деморолик',       en: 'Demo reel'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.46.jpeg?raw=true' },
   { 
     id: 13, 
     title: { ru: 'Строительная компания UNISON', en: 'UNISON Construction' }, 
@@ -183,13 +183,14 @@ export const projects: Project[] = [
     grad: ['#111111', '#222222'], 
     accent: '#d4af37', 
     type: 'grid',
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2014.00.21.jpeg?raw=true',
     description: {
       ru: 'Имиджевый рекламный ролик для строительной компании UNISON. Масштаб, надежность и современные технологии строительства, переданные через выразительный визуальный язык нейросетей.',
       en: 'Brand commercial for UNISON construction company. Scale, reliability, and modern construction technologies conveyed through the expressive visual language of neural networks.'
     },
     client: { ru: 'UNISON', en: 'UNISON' }
   },
-  { id: 4,  title: { ru: 'BioPeel',            en: 'BioPeel'          }, cat: 'video', year: 2024, catLabel: { ru: 'Реклама',        en: 'Commercial'  }, grad: ['#0f2027','#1a3a4a'], accent: '#7ec8a8', type: 'bubble'  },
+  { id: 4,  title: { ru: 'Видеоконтент для маркетплейсов', en: 'Marketplace Video Content' }, cat: 'video', year: 2024, catLabel: { ru: 'Реклама',        en: 'Commercial'  }, grad: ['#0f2027','#1a3a4a'], accent: '#7ec8a8', type: 'bubble'  },
   { id: 5,  title: { ru: 'Волшебные брызги',   en: 'Magic Splashes'   }, cat: 'video', year: 2024, catLabel: { ru: 'Анимация',       en: 'Animation'   }, grad: ['#2d1b3d','#5a3a7a'], accent: '#ffc0cb', type: 'splash'  },
   { id: 6,  title: { ru: 'Finance Tracker',    en: 'Finance Tracker'  }, cat: 'app',   year: 2024, catLabel: { ru: 'Приложение',    en: 'App'         }, grad: ['#0a1628','#1a2a4a'], accent: '#6ea8fe', type: 'chart'   },
   { id: 7,  title: { ru: 'Дневник вайбкодера', en: 'Vibe Coder Diary' }, cat: 'web',   year: 2024, catLabel: { ru: 'Сайт',           en: 'Website'     }, grad: ['#111111','#1a1a1a'], accent: '#e8452c', type: 'grid'    },
@@ -197,7 +198,6 @@ export const projects: Project[] = [
   { id: 9,  title: { ru: 'SYNTX · трейлер',    en: 'SYNTX · trailer'  }, cat: 'video', year: 2025, catLabel: { ru: 'Конкурс',        en: 'Contest'     }, grad: ['#0f0a1a','#2a1a3d'], accent: '#c49fff', type: 'stars'   },
   { id: 10, title: { ru: 'Weavy Launch',        en: 'Weavy Launch'     }, cat: 'web',   year: 2025, catLabel: { ru: 'Лендинг',        en: 'Landing'     }, grad: ['#1a1a1a','#2d2d2d'], accent: '#f5a08c', type: 'waves'   },
   { id: 11, title: { ru: 'Инвест-дек',          en: 'Investor Deck'    }, cat: 'deck',  year: 2024, catLabel: { ru: 'Презентация',   en: 'Deck'        }, grad: ['#0a1a0a','#1a3a1a'], accent: '#a8e8a0', type: 'bars'    },
-  { id: 12, title: { ru: 'HEIC Converter',      en: 'HEIC Converter'   }, cat: 'app',   year: 2024, catLabel: { ru: 'Утилита',        en: 'Utility'     }, grad: ['#1a1a0a','#3a3a1a'], accent: '#e8d854', type: 'pixels'  },
 ]
 
 // ─── SVG GENERATOR ───────────────────────────────────────────────────────────
