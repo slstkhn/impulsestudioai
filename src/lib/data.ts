@@ -191,8 +191,24 @@ export const projects: Project[] = [
     client: { ru: 'UNISON', en: 'UNISON' }
   },
   { id: 4,  title: { ru: 'Видеоконтент для маркетплейсов', en: 'Marketplace Video Content' }, cat: 'video', year: 2024, catLabel: { ru: 'Реклама',        en: 'Commercial'  }, grad: ['#0f2027','#1a3a4a'], accent: '#7ec8a8', type: 'bubble'  },
-  { id: 5,  title: { ru: 'Волшебные брызги',   en: 'Magic Splashes'   }, cat: 'video', year: 2024, catLabel: { ru: 'Анимация',       en: 'Animation'   }, grad: ['#2d1b3d','#5a3a7a'], accent: '#ffc0cb', type: 'splash'  },
-  { id: 6,  title: { ru: 'Finance Tracker',    en: 'Finance Tracker'  }, cat: 'app',   year: 2024, catLabel: { ru: 'Приложение',    en: 'App'         }, grad: ['#0a1628','#1a2a4a'], accent: '#6ea8fe', type: 'chart'   },
+  { id: 5,  title: { ru: 'Рилсы миллионники для ESIMETA',   en: 'Million-view Reels for ESIMETA'   }, cat: 'video', year: 2024, catLabel: { ru: 'Рилсы',       en: 'Reels'   }, grad: ['#2d1b3d','#5a3a7a'], accent: '#ffc0cb', type: 'splash', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2030%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2001_39_00.png?raw=true'  },
+  { 
+    id: 6, 
+    title: { ru: 'Alpha Futures', en: 'Alpha Futures' }, 
+    cat: 'video', 
+    year: 2026, 
+    vimeoId: '1222386469',
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/alpha_futures_4x5.png?raw=true',
+    catLabel: { ru: 'Реклама', en: 'Commercial' }, 
+    grad: ['#0a1628','#1a2a4a'], 
+    accent: '#6ea8fe', 
+    type: 'chart',
+    description: {
+      ru: 'Рекламный анимационный ролик для британской проп-трейдинговой компании, специализирующейся на финансировании трейдеров. В рамках проекта мы разработали фирменного маскота, сгенерировали ключевые кадры и анимировали их с помощью новейшего нейросетевого видеогенератора. Весь цикл производства занял всего 10 дней.',
+      en: 'Animated commercial for a UK prop trading firm specializing in trader funding. We developed a brand mascot, generated keyframes, and animated them using the latest AI video generator. The entire production cycle took only 10 days.'
+    },
+    client: { ru: 'Alpha Futures', en: 'Alpha Futures' }
+  },
   { id: 7,  title: { ru: 'Дневник вайбкодера', en: 'Vibe Coder Diary' }, cat: 'web',   year: 2024, catLabel: { ru: 'Сайт',           en: 'Website'     }, grad: ['#111111','#1a1a1a'], accent: '#e8452c', type: 'grid'    },
   { id: 8,  title: { ru: 'ТПСК',               en: 'TPSK'             }, cat: 'deck',  year: 2024, catLabel: { ru: 'Презентация',   en: 'Deck'        }, grad: ['#1a1414','#3d1a1a'], accent: '#e85454', type: 'layers'  },
   { id: 9,  title: { ru: 'SYNTX · трейлер',    en: 'SYNTX · trailer'  }, cat: 'video', year: 2025, catLabel: { ru: 'Конкурс',        en: 'Contest'     }, grad: ['#0f0a1a','#2a1a3d'], accent: '#c49fff', type: 'stars'   },

@@ -414,15 +414,29 @@ ul { list-style: none; }
 .btn-primary:hover .arrow { transform: translateX(4px); }
 .btn-ghost {
   font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--ink-dim); padding: 1rem 0; position: relative; transition: color 0.3s;
+  color: var(--ink-dim); padding: 1rem 1.5rem; margin-left: -1.5rem; position: relative; transition: all 0.3s;
+  border-radius: 100px;
 }
-.btn-ghost:hover { color: var(--ink); }
+.btn-ghost:hover { color: var(--bg); background: var(--accent); }
 .btn-ghost::after {
-  content: ''; position: absolute; bottom: 0.75rem; left: 0;
-  width: 100%; height: 1px; background: var(--ink-faint);
-  transform-origin: right; transition: transform 0.4s var(--ease-out);
+  content: ''; position: absolute; bottom: 0.75rem; left: 1.5rem;
+  width: calc(100% - 3rem); height: 1px; background: var(--ink-faint);
+  transition: opacity 0.3s;
 }
-.btn-ghost:hover::after { transform-origin: left; transform: scaleX(1); }
+.btn-ghost:hover::after { opacity: 0; }
+
+.dynamic-word {
+  display: inline-block;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 0 0.15em;
+  border-radius: 0.15em;
+  font-style: italic;
+  font-weight: 400;
+  min-width: 4.5em;
+  text-align: center;
+  transition: all 0.3s var(--ease-out);
+}
 
 /* ── SECTIONS ── */
 section { padding: 7rem 2.5rem; position: relative; }

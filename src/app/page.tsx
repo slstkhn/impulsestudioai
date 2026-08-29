@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useApp } from '@/lib/context'
 import { useReveal } from '@/components/useReveal'
 import Nav from '@/components/Nav'
@@ -14,6 +14,20 @@ const TICKER_KEYS = ['tick_1','tick_2','tick_3','tick_5']
 export default function Home() {
   const { t, lang } = useApp()
   const [openProject, setOpenProject] = useState<Project | null>(null)
+  
+  const wordsRu = ['бизнесу', 'блогу', 'бренду', 'жизни']
+  const wordsEn = ['business', 'blog', 'brand', 'life']
+  const [wordIndex, setWordIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex(i => (i + 1) % 4)
+    }, 1200)
+    return () => clearInterval(interval)
+  }, [])
+  
+  const words = lang === 'ru' ? wordsRu : wordsEn
+  
   useReveal()
   const featured = [projects[0], projects[1]]
 
@@ -29,12 +43,9 @@ export default function Home() {
           <div className="hero-grid">
             <div>
               <h1 className="hero-title">
-                <span className="line"><span className="word">{t('hero_1')}</span></span>
-                <span className="line"><span className="word italic">{t('hero_2')}</span></span>
+                <span className="line"><span className="word">{lang === 'ru' ? 'Придаём ' : 'Giving '}<em style={{fontStyle: 'italic', color: 'var(--accent-soft)'}}>ИИмпульс</em></span></span>
+                <span className="line"><span className="word italic">{lang === 'en' ? 'to ' : ''}<span className="dynamic-word">{words[wordIndex]}</span></span></span>
               </h1>
-              <p className="hero-desc">
-                {t('hero_desc_1')}<em>{t('hero_desc_em')}</em>{t('hero_desc_2')}
-              </p>
               <div className="hero-cta-row">
                 <a href="/projects" className="btn-primary">
                   <span>{t('cta_work')}</span>
@@ -45,7 +56,6 @@ export default function Home() {
             </div>
             <div className="hero-meta">
               <div className="hero-meta-block"><strong>50+</strong>{t('meta_projects')}</div>
-              <div className="hero-meta-block"><strong>12</strong>{t('meta_tools')}</div>
             </div>
           </div>
           <div className="ticker">
@@ -117,7 +127,7 @@ export default function Home() {
                 <div className="work-meta">
                   <div>
                     <h3 className="work-title">
-                      {i === 0 ? <>{t('w1_title')}<em>Becker</em></> : <>{t('w2_title')}<em>{t('w2_title_em')}</em></>}
+                      {i === 0 ? <>{t('w1_title')}<br /><em>Becker</em></> : <>{t('w2_title')}<br /><em>{t('w2_title_em')}</em></>}
                     </h3>
                     <span className="work-client">{t(`w${i+1}_client`)}</span>
                   </div>
