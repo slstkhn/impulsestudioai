@@ -35,12 +35,8 @@ export default function About() {
             <div className="stat-label">{t('ab_stat1')}</div>
           </div>
           <div className="stat">
-            <div className="stat-num">12</div>
+            <div className="stat-num">10</div>
             <div className="stat-label">{t('ab_stat2')}</div>
-          </div>
-          <div className="stat">
-            <div className="stat-num">5</div>
-            <div className="stat-label">{t('ab_stat3')}</div>
           </div>
         </section>
       </main>
