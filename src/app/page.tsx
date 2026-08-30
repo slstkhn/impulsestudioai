@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 import { useApp } from '@/lib/context'
 import { useReveal } from '@/components/useReveal'
 import Nav from '@/components/Nav'
@@ -22,14 +23,14 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setWordIndex(i => (i + 1) % 4)
-    }, 1200)
+    }, 2000)
     return () => clearInterval(interval)
   }, [])
   
   const words = lang === 'ru' ? wordsRu : wordsEn
   
   useReveal()
-  const featured = [projects[0], projects[1]]
+  const featured = [projects[1], projects[0]]
 
   return (
     <>
@@ -44,7 +45,25 @@ export default function Home() {
             <div>
               <h1 className="hero-title">
                 <span className="line"><span className="word">{lang === 'ru' ? 'Придаём ' : 'Giving '}<em style={{fontStyle: 'italic', color: 'var(--accent-soft)'}}>ИИмпульс</em></span></span>
-                <span className="line"><span className="word italic">{lang === 'en' ? 'to ' : ''}<span className="dynamic-word">{words[wordIndex]}</span></span></span>
+                <span className="line">
+                  <span className="word italic">
+                    {lang === 'en' ? 'to ' : ''}
+                    <span className="dynamic-word-wrapper">
+                      <AnimatePresence mode="popLayout">
+                        <motion.span
+                          key={wordIndex}
+                          initial={{ y: '100%', opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          exit={{ y: '-100%', opacity: 0 }}
+                          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                          className="dynamic-word-inner"
+                        >
+                          {words[wordIndex]}
+                        </motion.span>
+                      </AnimatePresence>
+                    </span>
+                  </span>
+                </span>
               </h1>
               <div className="hero-cta-row">
                 <a href="/projects" className="btn-primary">
@@ -108,7 +127,7 @@ export default function Home() {
                 onClick={() => setOpenProject(p)}
               >
                 <div className="work-visual">
-                  <span className="work-tag">{t(`w${i+1}_tag`)}</span>
+                  <span className="work-tag">{t(`w${p.id}_tag`)}</span>
                   <span className="work-year">{p.year}</span>
                   {p.coverUrl ? (
                     <img 
@@ -127,11 +146,11 @@ export default function Home() {
                 <div className="work-meta">
                   <div>
                     <h3 className="work-title">
-                      {i === 0 ? <>{t('w1_title')}<br /><em>Becker</em></> : <>{t('w2_title')}<br /><em>{t('w2_title_em')}</em></>}
+                      {p.id === 1 ? <>{t('w1_title')}<br /><em>Becker</em></> : <>{t('w2_title')}<br /><em>{t('w2_title_em')}</em></>}
                     </h3>
-                    <span className="work-client">{t(`w${i+1}_client`)}</span>
+                    <span className="work-client">{p.catLabel[lang]}</span>
                   </div>
-                  <span className="work-link">{t(`w${i+1}_link`)}</span>
+                  <span className="work-link">{t(`w${p.id}_link`)}</span>
                 </div>
               </article>
             ))}

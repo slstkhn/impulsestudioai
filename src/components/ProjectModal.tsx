@@ -66,7 +66,10 @@ export default function ProjectModal({ project, onClose }: Props) {
           <div className="modal-cat">{project.catLabel[lang]}</div>
           <h2 className="modal-title">{project.title[lang]}</h2>
           {project.description && (
-            <p className="modal-desc">{project.description[lang]}</p>
+            <p 
+              className="modal-desc" 
+              dangerouslySetInnerHTML={{ __html: project.description[lang] }} 
+            />
           )}
           <div className="modal-meta">
             <span>{project.year}</span>

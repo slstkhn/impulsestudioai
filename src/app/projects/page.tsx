@@ -26,7 +26,8 @@ export default function Projects() {
 
   const rawFiltered = filter === 'all' ? projects : projects.filter(p => p.cat === filter)
   const isPlaceholder = filter === 'web' || filter === 'deck'
-  const filtered = isPlaceholder ? [] : rawFiltered
+  const sortedFiltered = isPlaceholder ? [] : [...rawFiltered].sort((a, b) => b.year - a.year)
+  const filtered = sortedFiltered
 
   return (
     <>
@@ -50,7 +51,6 @@ export default function Projects() {
               {t(f.labelKey)}
             </button>
           ))}
-          <span className="filter-count">{isPlaceholder ? 0 : filtered.length} {t('f_count')}</span>
         </div>
 
         {isPlaceholder ? (

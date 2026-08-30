@@ -48,7 +48,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     cta_t_1: 'Есть идея?',
     cta_t_em: 'Давайте воплотим.',
     cta_btn: 'Написать нам',
-    pj_h_1: 'Все',
+    pj_h_1: 'Избранные ',
     pj_h_em: 'проекты',
     pj_h_desc: '',
     f_all: 'Все', f_video: 'Нейровидео', f_web: 'Сайты', f_deck: 'Презентации', f_app: '',
@@ -109,7 +109,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     p3_title: 'Production', p3_text: 'Prompting, generation, compositing, grading. Every frame under control.',
     p4_title: 'Finish', p4_text: 'Revisions, mastering, platform formats. Delivered as a package.',
     cta_t_1: 'Got an idea?', cta_t_em: "Let's make it real.", cta_btn: 'Get in touch',
-    pj_h_1: 'All', pj_h_em: 'projects',
+    pj_h_1: 'Featured ', pj_h_em: 'projects',
     pj_h_desc: '',
     f_all: 'All', f_video: 'AI Video', f_web: 'Web', f_deck: 'Decks', f_app: '',
     f_count: 'projects',
@@ -161,7 +161,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2025, catLabel: { ru: 'ВИДЕОВИЗИТКА',   en: 'PROMO'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
+  { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2025, catLabel: { ru: 'Реклама · Кухни',   en: 'Commercial · Kitchens'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
     // Вставьте сюда ID вашего загруженного видео с Vimeo
     vimeoId: '1211691292', // Замените на ваш ID
     coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.37.jpeg?raw=true',
@@ -171,15 +171,15 @@ export const projects: Project[] = [
     },
     client: { ru: 'Becker · Реклама', en: 'Becker · Commercial' },
   },
-  { id: 2,  title: { ru: 'Футбольный клуб GERMES',   en: 'Football Club GERMES' }, cat: 'video', year: 2026, vimeoId: '1219025417', catLabel: { ru: 'Реклама', en: 'Commercial'  }, grad: ['#0d1117','#1a1a2e'], accent: '#8b7355', type: 'frame', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.39.jpeg?raw=true' },
-  { id: 3,  title: { ru: 'Партия Новые люди',          en: 'New People Party'         }, cat: 'video', year: 2025, vimeoId: '1219493729', catLabel: { ru: 'Деморолик',       en: 'Demo reel'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.46.jpeg?raw=true' },
+  { id: 2,  title: { ru: 'Футбольный клуб GERMES',   en: 'Football Club GERMES' }, cat: 'video', year: 2026, vimeoId: '1219025417', catLabel: { ru: 'Реклама · Футбол', en: 'Commercial · Football'  }, grad: ['#0d1117','#1a1a2e'], accent: '#8b7355', type: 'frame', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.39.jpeg?raw=true' },
+  { id: 3,  title: { ru: 'Партия Новые люди',          en: 'New People Party'         }, cat: 'video', year: 2025, vimeoId: '1219493729', catLabel: { ru: 'Деморолик · Политика',       en: 'Demo reel · Politics'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.46.jpeg?raw=true' },
   { 
     id: 13, 
     title: { ru: 'Строительная компания UNISON', en: 'UNISON Construction' }, 
     cat: 'video', 
     year: 2026, 
     vimeoId: '1219989315', 
-    catLabel: { ru: 'Реклама', en: 'Commercial' }, 
+    catLabel: { ru: 'Реклама · Недвижимость', en: 'Commercial · Real Estate' }, 
     grad: ['#111111', '#222222'], 
     accent: '#d4af37', 
     type: 'grid',
@@ -190,16 +190,16 @@ export const projects: Project[] = [
     },
     client: { ru: 'UNISON', en: 'UNISON' }
   },
-  { id: 4,  title: { ru: 'Видеоконтент для маркетплейсов', en: 'Marketplace Video Content' }, cat: 'video', year: 2024, catLabel: { ru: 'Реклама',        en: 'Commercial'  }, grad: ['#0f2027','#1a3a4a'], accent: '#7ec8a8', type: 'bubble'  },
-  { id: 5,  title: { ru: 'Рилсы миллионники для ESIMETA',   en: 'Million-view Reels for ESIMETA'   }, cat: 'video', year: 2024, catLabel: { ru: 'Рилсы',       en: 'Reels'   }, grad: ['#2d1b3d','#5a3a7a'], accent: '#ffc0cb', type: 'splash', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2030%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2001_39_00.png?raw=true'  },
+  { id: 4,  title: { ru: 'Видеоконтент для маркетплейсов', en: 'Marketplace Video Content' }, cat: 'video', year: 2025, catLabel: { ru: 'Реклама',        en: 'Commercial'  }, grad: ['#0f2027','#1a3a4a'], accent: '#7ec8a8', type: 'bubble'  },
+  { id: 5,  title: { ru: 'Рилсы миллионники для ESIMETA',   en: 'Million-view Reels for ESIMETA'   }, cat: 'video', year: 2026, catLabel: { ru: 'Рилсы · eSIM-оператор',       en: 'Reels · eSIM Operator'   }, grad: ['#2d1b3d','#5a3a7a'], accent: '#ffc0cb', type: 'splash', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2030%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2001_39_00.png?raw=true'  },
   { 
     id: 6, 
-    title: { ru: 'Alpha Futures', en: 'Alpha Futures' }, 
+    title: { ru: 'Британская проп-трейдинговая компания Alpha Futures', en: 'UK Prop Trading Firm Alpha Futures' }, 
     cat: 'video', 
     year: 2026, 
     vimeoId: '1222386469',
     coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/alpha_futures_4x5.png?raw=true',
-    catLabel: { ru: 'Реклама', en: 'Commercial' }, 
+    catLabel: { ru: 'Реклама · Трейдинг', en: 'Commercial · Trading' }, 
     grad: ['#0a1628','#1a2a4a'], 
     accent: '#6ea8fe', 
     type: 'chart',
@@ -211,7 +211,23 @@ export const projects: Project[] = [
   },
   { id: 7,  title: { ru: 'Дневник вайбкодера', en: 'Vibe Coder Diary' }, cat: 'web',   year: 2024, catLabel: { ru: 'Сайт',           en: 'Website'     }, grad: ['#111111','#1a1a1a'], accent: '#e8452c', type: 'grid'    },
   { id: 8,  title: { ru: 'ТПСК',               en: 'TPSK'             }, cat: 'deck',  year: 2024, catLabel: { ru: 'Презентация',   en: 'Deck'        }, grad: ['#1a1414','#3d1a1a'], accent: '#e85454', type: 'layers'  },
-  { id: 9,  title: { ru: 'SYNTX · трейлер',    en: 'SYNTX · trailer'  }, cat: 'video', year: 2025, catLabel: { ru: 'Конкурс',        en: 'Contest'     }, grad: ['#0f0a1a','#2a1a3d'], accent: '#c49fff', type: 'stars'   },
+  { 
+    id: 9, 
+    title: { ru: 'Онлайн-гипермаркет Утконос', en: 'Utkonos Online Hypermarket' }, 
+    cat: 'video', 
+    year: 2025, 
+    vimeoId: '1219692371', 
+    catLabel: { ru: 'Корпоративный ролик · Ритэйл', en: 'Corporate Video · Retail' }, 
+    grad: ['#0f0a1a','#2a1a3d'], 
+    accent: '#c49fff', 
+    type: 'stars', 
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2030%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2017_16_37.png?raw=true',
+    description: {
+      ru: 'Символ сети — утка — зазывает зрителя в магазин «Утконос», где ожившие 3D-персонажи в индийских традиционных нарядах поэтапно произносят праздничное стихотворение, зажигательно поздравляя компанию и коллег с Новым годом.',
+      en: 'The network mascot — a duck — invites the viewer to the Utkonos store, where animated 3D characters in traditional Indian outfits recite a festive poem, enthusiastically wishing the company and colleagues a Happy New Year.'
+    },
+    client: { ru: 'Утконос', en: 'Utkonos' }
+  },
   { id: 10, title: { ru: 'Weavy Launch',        en: 'Weavy Launch'     }, cat: 'web',   year: 2025, catLabel: { ru: 'Лендинг',        en: 'Landing'     }, grad: ['#1a1a1a','#2d2d2d'], accent: '#f5a08c', type: 'waves'   },
   { id: 11, title: { ru: 'Инвест-дек',          en: 'Investor Deck'    }, cat: 'deck',  year: 2024, catLabel: { ru: 'Презентация',   en: 'Deck'        }, grad: ['#0a1a0a','#1a3a1a'], accent: '#a8e8a0', type: 'bars'    },
 ]
