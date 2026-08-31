@@ -79,9 +79,12 @@ export default function Home() {
           </div>
           <div className="ticker">
             <div className="ticker-track">
-              {[...TICKER_KEYS, ...TICKER_KEYS].map((key, i) => (
-                <span key={i}>{i % 2 === 0 ? <em>{t(key)}</em> : t(key)}</span>
-              )).flatMap((el, i) => [el, <span key={`s${i}`} className="star">✦</span>])}
+              {[...Array(12)].flatMap(() => TICKER_KEYS).map((key, i) => (
+                <React.Fragment key={i}>
+                  <span>{i % 2 === 0 ? <em>{t(key)}</em> : t(key)}</span>
+                  <span className="star">✦</span>
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </section>
@@ -165,7 +168,7 @@ export default function Home() {
 
         <section className="clients-ticker">
           <div className="clients-ticker-track">
-            {[...Array(4)].map((_, i) => (
+            {[...Array(12)].map((_, i) => (
               <React.Fragment key={i}>
                 <div className="clients-ticker-item"><BeckerLogo /></div>
                 <div className="clients-ticker-item"><UtkonosLogo /></div>

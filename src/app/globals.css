@@ -355,8 +355,10 @@ ul { list-style: none; }
   padding: 0.9rem 0; overflow: hidden; white-space: nowrap; background: var(--nav-bg);
 }
 .ticker-track {
-  display: inline-block;
-  animation: ticker 40s linear infinite;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  animation: ticker 240s linear infinite;
   font-family: var(--font-display); font-size: 1.1rem; font-weight: 300;
 }
 .ticker-track span { margin-right: 3rem; color: var(--ink-dim); }
@@ -375,7 +377,8 @@ ul { list-style: none; }
 .clients-ticker-track {
   display: inline-flex;
   align-items: center;
-  animation: ticker 50s linear infinite;
+  width: max-content;
+  animation: ticker 150s linear infinite;
 }
 .clients-ticker-item {
   display: inline-flex;
