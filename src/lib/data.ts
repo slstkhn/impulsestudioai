@@ -40,11 +40,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     w2_tag: 'Реклама', w2_title_em: 'GERMES', w2_title: 'Футбольный клуб ', w2_client: 'Реклама', w2_link: 'Смотреть →',
     proc_label: 'Как работаем',
     proc_title_1: 'Процесс',
-    proc_title_em: 'в четыре такта',
-    p1_title: 'Бриф', p1_text: 'Разбираемся в задаче, аудитории и референсах. Фиксируем цель и метрики.',
+    proc_title_em: 'в четыре этапа',
+    p1_title: 'Бриф', p1_text: 'Разбираемся в задаче, аудитории и референсах. Фиксируем цель.',
     p2_title: 'Концепция', p2_text: 'Визуальный язык, сторилайн, раскадровка. Согласовываем до продакшна.',
     p3_title: 'Продакшн', p3_text: 'Промптинг, генерация, композ, цветокор. Контролируем каждый кадр.',
-    p4_title: 'Финал', p4_text: 'Правки, мастеринг, форматы под площадки. Сдаём пакетом.',
+    p4_title: 'Финал', p4_text: 'Правки, мастеринг, сдача готового ролика.',
     cta_t_1: 'Есть идея?',
     cta_t_em: 'Давайте воплотим.',
     cta_btn: 'Написать нам',
@@ -57,7 +57,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     placeholder_desc: 'Мы готовим новые проекты для этого раздела. Загляните позже!',
     ab_h_1: 'Мы — ', ab_h_em: 'Импульс', ab_h_desc: 'Нейростудия полного цикла. Создаём видео, сайты, презентации с помощью AI и человеческого вкуса.',
     ab_sec1_title: 'Наша философия',
-    ab_sec1_text1: 'Работаем на стыке кино, дизайна и нейросетей. Мы делаем контент, который не выглядит как контент: он выглядит как искусство, которое случайно продаёт.',
+    ab_sec1_text1: 'Работаем на стыке кино, дизайна и нейросетей.',
     ab_sec1_text2: 'Нейросети — это не замена режиссёру. Это новая оптика. Камера, которой не существовало. Мы видим этот инструмент как продолжение руки — и пользуемся им так же аккуратно, как оператор пользуется светом.',
     ab_stat1: 'Проектов сдано', ab_stat2: 'Брендов-клиентов', ab_stat3: 'AI-инструментов',
     man_sig: 'Денис, основатель',
@@ -103,11 +103,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     work_all: 'All projects →', work_cta: 'All projects',
     w1_tag: 'PROMO', w1_title: 'Kitchen Factory ', w1_client: 'Promo', w1_link: 'View →',
     w2_tag: 'Commercial', w2_title_em: 'GERMES', w2_title: 'Football Club ', w2_client: 'Commercial', w2_link: 'View →',
-    proc_label: 'How we work', proc_title_1: 'Process', proc_title_em: 'in four beats',
-    p1_title: 'Brief', p1_text: 'We map the task, audience, references. Pin down goals and metrics.',
+    proc_label: 'How we work', proc_title_1: 'Process', proc_title_em: 'in four steps',
+    p1_title: 'Brief', p1_text: 'We map the task, audience, and references. We define the goal.',
     p2_title: 'Concept', p2_text: 'Visual language, storyline, storyboard. Approved before production.',
     p3_title: 'Production', p3_text: 'Prompting, generation, compositing, grading. Every frame under control.',
-    p4_title: 'Finish', p4_text: 'Revisions, mastering, platform formats. Delivered as a package.',
+    p4_title: 'Final', p4_text: 'Revisions, mastering, delivery of the final video.',
     cta_t_1: 'Got an idea?', cta_t_em: "Let's make it real.", cta_btn: 'Get in touch',
     pj_h_1: 'Featured ', pj_h_em: 'projects',
     pj_h_desc: '',
@@ -117,7 +117,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     placeholder_desc: 'We are preparing new projects for this section. Check back later!',
     ab_h_1: 'We are ', ab_h_em: 'Impulse', ab_h_desc: 'Full-cycle neurostudio. We craft videos, websites, decks with AI and human taste.',
     ab_sec1_title: 'Our Philosophy',
-    ab_sec1_text1: 'Operating at the intersection of film, design, and neural networks. We create content that does not look like content: it looks like art that happens to sell.',
+    ab_sec1_text1: 'Operating at the intersection of film, design, and neural networks.',
     ab_sec1_text2: "Neural networks are not a replacement for a director. They are a new optic. A camera that didn't exist before. We see this tool as an extension of the hand — and use it as carefully as a cinematographer uses light.",
     ab_stat1: 'Projects shipped', ab_stat2: 'Client brands', ab_stat3: 'AI tools',
     man_sig: 'Denis, founder',
@@ -171,7 +171,22 @@ export const projects: Project[] = [
     },
     client: { ru: 'Becker · Реклама', en: 'Becker · Commercial' },
   },
-  { id: 2,  title: { ru: 'Футбольный клуб GERMES',   en: 'Football Club GERMES' }, cat: 'video', year: 2026, vimeoId: '1219025417', catLabel: { ru: 'Реклама · Футбол', en: 'Commercial · Football'  }, grad: ['#0d1117','#1a1a2e'], accent: '#8b7355', type: 'frame', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.39.jpeg?raw=true' },
+  { 
+    id: 2,  
+    title: { ru: 'Футбольный клуб GERMES',   en: 'Football Club GERMES' }, 
+    cat: 'video', 
+    year: 2026, 
+    vimeoId: '1219025417', 
+    catLabel: { ru: 'Реклама · Футбол', en: 'Commercial · Football'  }, 
+    grad: ['#0d1117','#1a1a2e'], 
+    accent: '#8b7355', 
+    type: 'frame', 
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.39.jpeg?raw=true',
+    description: {
+      ru: 'Обуздай хищную энергию улиц в новой игровой форме FC Germes — раскрой внутри себя непокорного зверя.',
+      en: 'Harness the predatory energy of the streets in the new FC Germes kit — unleash the untamed beast within.'
+    }
+  },
   { id: 3,  title: { ru: 'Партия Новые люди',          en: 'New People Party'         }, cat: 'video', year: 2025, vimeoId: '1219493729', catLabel: { ru: 'Деморолик · Политика',       en: 'Demo reel · Politics'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.46.jpeg?raw=true' },
   { 
     id: 13, 
@@ -190,7 +205,22 @@ export const projects: Project[] = [
     },
     client: { ru: 'UNISON', en: 'UNISON' }
   },
-  { id: 4,  title: { ru: 'Видеоконтент для маркетплейсов', en: 'Marketplace Video Content' }, cat: 'video', year: 2025, catLabel: { ru: 'Реклама',        en: 'Commercial'  }, grad: ['#0f2027','#1a3a4a'], accent: '#7ec8a8', type: 'bubble'  },
+  { 
+    id: 4,  
+    title: { ru: 'Видеоконтент для маркетплейсов', en: 'Marketplace Video Content' }, 
+    cat: 'video', 
+    year: 2025, 
+    vimeoId: '1222818369',
+    catLabel: { ru: 'Реклама', en: 'Commercial'  }, 
+    grad: ['#0f2027','#1a3a4a'], 
+    accent: '#7ec8a8', 
+    type: 'bubble',
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2031%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2017_28_51.png?raw=true',
+    description: {
+      ru: 'Забудьте о сухости, жжении и усталости глаз: регенерирующий бальзам «Окопепт» быстро восстанавливает ткани и дарит ясность зрения без привыкания.',
+      en: 'Forget about dryness, burning, and eye fatigue: the regenerating Okopept balm quickly restores tissues and provides clear vision without addiction.'
+    }
+  },
   { 
     id: 5, 
     title: { ru: 'Рилсы миллионники для ESIMETA', en: 'Million-view Reels for ESIMETA' }, 
@@ -224,8 +254,6 @@ export const projects: Project[] = [
     },
     client: { ru: 'Alpha Futures', en: 'Alpha Futures' }
   },
-  { id: 7,  title: { ru: 'Дневник вайбкодера', en: 'Vibe Coder Diary' }, cat: 'web',   year: 2024, catLabel: { ru: 'Сайт',           en: 'Website'     }, grad: ['#111111','#1a1a1a'], accent: '#e8452c', type: 'grid'    },
-  { id: 8,  title: { ru: 'ТПСК',               en: 'TPSK'             }, cat: 'deck',  year: 2024, catLabel: { ru: 'Презентация',   en: 'Deck'        }, grad: ['#1a1414','#3d1a1a'], accent: '#e85454', type: 'layers'  },
   { 
     id: 9, 
     title: { ru: 'Онлайн-гипермаркет Утконос', en: 'Utkonos Online Hypermarket' }, 
@@ -242,9 +270,7 @@ export const projects: Project[] = [
       en: 'The network mascot — a duck — invites the viewer to the Utkonos store, where animated 3D characters in traditional Indian outfits recite a festive poem, enthusiastically wishing the company and colleagues a Happy New Year.'
     },
     client: { ru: 'Утконос', en: 'Utkonos' }
-  },
-  { id: 10, title: { ru: 'Weavy Launch',        en: 'Weavy Launch'     }, cat: 'web',   year: 2025, catLabel: { ru: 'Лендинг',        en: 'Landing'     }, grad: ['#1a1a1a','#2d2d2d'], accent: '#f5a08c', type: 'waves'   },
-  { id: 11, title: { ru: 'Инвест-дек',          en: 'Investor Deck'    }, cat: 'deck',  year: 2024, catLabel: { ru: 'Презентация',   en: 'Deck'        }, grad: ['#0a1a0a','#1a3a1a'], accent: '#a8e8a0', type: 'bars'    },
+  }
 ]
 
 // ─── SVG GENERATOR ───────────────────────────────────────────────────────────

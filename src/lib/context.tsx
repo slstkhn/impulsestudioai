@@ -18,6 +18,22 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>('ru')
   const [theme, setTheme] = useState<Theme>('light')
 
+  // Инициализация темы на основе системных настроек и прослушивание изменений
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    
+    // Устанавливаем начальную тему
+    setTheme(mediaQuery.matches ? 'dark' : 'light')
+
+    // Слушатель для автоматического изменения темы, если она меняется на устройстве
+    const handleChange = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? 'dark' : 'light')
+    }
+
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+
   // Применяем тему к <html> — так переменные наследуются всем документом
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
