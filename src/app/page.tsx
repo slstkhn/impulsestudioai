@@ -120,7 +120,6 @@ export default function Home() {
               <div className="section-label"><span>02 — {t('work_label')}</span></div>
               <h2 className="section-title">{t('work_title_1')} <em>{t('work_title_em')}</em></h2>
             </div>
-            <a href="/projects" className="btn-ghost">{t('work_all')}</a>
           </div>
           <div className="works-grid">
             {featured.map((p, i) => (
@@ -167,6 +166,12 @@ export default function Home() {
         </section>
 
         <section className="clients-ticker">
+          <div className="section-header reveal">
+            <div>
+              <div className="section-label"><span>03 — {t('clients_label')}</span></div>
+              <h2 className="section-title">{t('clients_title_1')} <em>{t('clients_title_em')}</em></h2>
+            </div>
+          </div>
           <div className="clients-ticker-track">
             {[...Array(12)].map((_, i) => (
               <React.Fragment key={i}>
@@ -186,7 +191,7 @@ export default function Home() {
         <section className="process">
           <div className="section-header reveal">
             <div>
-              <div className="section-label"><span>03 — {t('proc_label')}</span></div>
+              <div className="section-label"><span>04 — {t('proc_label')}</span></div>
               <h2 className="section-title">{t('proc_title_1')} <em>{t('proc_title_em')}</em></h2>
             </div>
           </div>
@@ -195,7 +200,7 @@ export default function Home() {
               <div key={n} className="process-item reveal">
                 <div className="process-num">0{n}</div>
                 <h3 className="process-title">{t(`p${n}_title`)}</h3>
-                <p className="process-text">{t(`p${n}_text`)}</p>
+                {t(`p${n}_text`) && <p className="process-text">{t(`p${n}_text`)}</p>}
               </div>
             ))}
           </div>

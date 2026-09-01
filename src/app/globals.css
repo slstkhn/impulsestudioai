@@ -289,8 +289,8 @@ ul { list-style: none; }
   font-family: var(--font-display);
   font-size: clamp(4rem, 13vw, 11rem);
   font-weight: 300;
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
   color: var(--ink);
 }
@@ -371,14 +371,18 @@ ul { list-style: none; }
 
 .clients-ticker {
   border-bottom: 1px solid var(--line);
-  padding: 4rem 0; overflow: hidden; white-space: nowrap; background: var(--bg);
+  padding: 7rem 0 4rem; overflow: hidden; background: var(--bg);
   position: relative;
+}
+.clients-ticker .section-header {
+  margin: 0 2.5rem 4rem;
 }
 .clients-ticker-track {
   display: inline-flex;
   align-items: center;
   width: max-content;
   animation: ticker 150s linear infinite;
+  white-space: nowrap;
 }
 .clients-ticker-item {
   display: inline-flex;
@@ -386,11 +390,6 @@ ul { list-style: none; }
   justify-content: center;
   height: 32px;
   margin-right: 6rem;
-  color: var(--ink-dim);
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-.clients-ticker-item:hover {
   color: var(--ink);
   opacity: 1;
 }
@@ -552,7 +551,7 @@ section { padding: 7rem 2.5rem; position: relative; }
 
 /* ── PROCESS ── */
 .process { background: var(--bg); }
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 2rem; }
 .process-item { padding: 2rem 0; border-top: 1px solid var(--line); }
 .process-num { font-family: var(--font-display); font-style: italic; font-size: 4rem; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 1rem; }
 .process-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.75rem; color: var(--ink); }
@@ -864,12 +863,12 @@ footer { background: var(--bg); border-top: 1px solid var(--line); padding: 5rem
   section, .projects-hero, .about-hero, .manifesto, .stats, .tools, .contact, .cta-section { padding-left: 1.5rem; padding-right: 1.5rem; }
   .works-grid, .process-grid, .projects-hero-inner, .about-hero, .footer-main, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .work-card:nth-child(2) { transform: translateY(0); }
-  .process-grid { gap: 0; }
   .stats { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr 1fr; padding: 2rem 1.5rem; }
   .service { grid-template-columns: 40px 1fr; gap: 1rem; padding: 1.75rem 0; }
   .service-desc, .service-arrow { display: none; }
-  .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
+  .clients-ticker .section-header { margin: 0 1.5rem 2rem; }
   .filter-bar { top: 68px; padding: 1.25rem 1.5rem; }
   .filter-count { display: none; }
   footer { padding: 3rem 1.5rem 1.5rem; }
