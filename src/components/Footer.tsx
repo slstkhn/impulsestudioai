@@ -32,12 +32,8 @@ export default function Footer() {
         <div className="footer-col">
           <h4>{t('f_social')}</h4>
           <ul>
-            {[
-              ['Instagram', 'https://instagram.com'],
-              ['Telegram',  'https://t.me'],
-            ].map(([name, href]) => (
-              <li key={name}><a href={href} target="_blank" rel="noopener noreferrer">{name}</a></li>
-            ))}
+            <li><a href="/instagram">Instagram</a></li>
+            <li><a href="https://t.me/denisprompt" target="_blank" rel="noopener noreferrer">Telegram</a></li>
           </ul>
         </div>
       </div>
