@@ -384,6 +384,10 @@ ul { list-style: none; }
   animation: ticker 150s linear infinite;
   white-space: nowrap;
 }
+.clients-ticker-group {
+  display: flex;
+  align-items: center;
+}
 .clients-ticker-item {
   display: inline-flex;
   align-items: center;
@@ -833,6 +837,20 @@ footer { background: var(--bg); border-top: 1px solid var(--line); padding: 5rem
   .modal-backdrop { padding: 0; align-items: stretch; }
   .modal-shell { border-radius: 0; }
   .modal-info { padding: 1.5rem; }
+  
+  .clients-ticker .section-header { text-align: center; margin: 0 1.5rem 2rem; align-items: center; }
+  .clients-ticker .section-label { display: none; }
+  .clients-ticker .section-title { font-size: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase; font-family: var(--font-sans); font-weight: 800; font-style: normal; }
+  .clients-ticker .section-title em { font-style: normal; color: inherit; }
+  .clients-ticker-track { display: block; width: 100%; animation: none; white-space: normal; padding: 0 1.5rem; }
+  .clients-ticker-group { display: none; }
+  .clients-ticker-group:first-child { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 1.5rem; 
+  }
+  .clients-ticker-item { margin-right: 0; height: auto; transform: scale(0.85); width: 40%; max-width: 150px; }
 }
 
 

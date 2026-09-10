@@ -174,7 +174,7 @@ export default function Home() {
           </div>
           <div className="clients-ticker-track">
             {[...Array(12)].map((_, i) => (
-              <React.Fragment key={i}>
+              <div key={i} className="clients-ticker-group">
                 <div className="clients-ticker-item"><BeckerLogo /></div>
                 <div className="clients-ticker-item"><UtkonosLogo /></div>
                 <div className="clients-ticker-item"><ServierLogo /></div>
@@ -182,7 +182,7 @@ export default function Home() {
                 <div className="clients-ticker-item"><NovyeLyudiLogo /></div>
                 <div className="clients-ticker-item"><UnisonLogo /></div>
                 <div className="clients-ticker-item"><EsimetaLogo /></div>
-              </React.Fragment>
+              </div>
             ))}
           </div>
         </section>
