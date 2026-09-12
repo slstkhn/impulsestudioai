@@ -169,6 +169,22 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 999,
+    title: { ru: 'ИИ Аватары', en: 'AI Avatars' },
+    cat: 'video',
+    year: 2026,
+    catLabel: { ru: 'блогеры • звёзды • ты', en: 'bloggers • stars • you' },
+    grad: ['#2a2a2a','#111111'],
+    accent: '#ffffff',
+    type: 'circuit',
+    vimeoId: '1226050432',
+    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2013%20%D1%81%D0%B5%D0%BD%D1%82.%202026%20%D0%B3.,%2000_16_01.png?raw=true',
+    description: {
+      ru: 'Создаём ультрареалистичных ИИ Аватаров для бизнеса, личного блога и других задач.',
+      en: 'We create ultra-realistic AI Avatars for business, personal blogs, and other tasks.'
+    }
+  },
   { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2025, catLabel: { ru: 'Реклама · Кухни',   en: 'Commercial · Kitchens'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
     // Вставьте сюда ID вашего загруженного видео с Vimeo
     vimeoId: '1211691292', // Замените на ваш ID
