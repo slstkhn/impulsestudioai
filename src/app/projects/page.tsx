@@ -26,7 +26,13 @@ export default function Projects() {
 
   const rawFiltered = filter === 'all' ? projects : projects.filter(p => p.cat === filter)
   const isPlaceholder = filter === 'web' || filter === 'deck'
-  const sortedFiltered = isPlaceholder ? [] : [...rawFiltered].sort((a, b) => b.year - a.year)
+  const sortedFiltered = isPlaceholder
+    ? []
+    : [...rawFiltered].sort((a, b) => {
+        if (a.id === 999) return -1
+        if (b.id === 999) return 1
+        return b.year - a.year
+      })
   const filtered = sortedFiltered
 
   return (

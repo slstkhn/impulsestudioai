@@ -30,7 +30,10 @@ export default function Home() {
   const words = lang === 'ru' ? wordsRu : wordsEn
   
   useReveal()
-  const featured = [projects[1], projects[0]]
+  const featured = [
+    projects.find(p => p.id === 999) || projects[0],
+    projects.find(p => p.id === 1) || projects[1],
+  ].filter(Boolean) as Project[]
 
   return (
     <>
@@ -129,7 +132,7 @@ export default function Home() {
                 onClick={() => setOpenProject(p)}
               >
                 <div className="work-visual">
-                  <span className="work-tag">{t(`w${p.id}_tag`)}</span>
+                  <span className="work-tag">{p.id === 999 ? (lang === 'ru' ? 'НЕЙРОАВАТАРЫ' : 'AI AVATARS') : (t(`w${p.id}_tag`) || p.catLabel[lang])}</span>
                   <span className="work-year">{p.year}</span>
                   {p.coverUrl ? (
                     <img 
@@ -148,11 +151,19 @@ export default function Home() {
                 <div className="work-meta">
                   <div>
                     <h3 className="work-title">
-                      {p.id === 1 ? <>{t('w1_title')}<br /><em>Becker</em></> : <>{t('w2_title')}<br /><em>{t('w2_title_em')}</em></>}
+                      {p.id === 999 ? (
+                        p.title[lang]
+                      ) : p.id === 1 ? (
+                        <>{t('w1_title')}<br /><em>Becker</em></>
+                      ) : p.id === 2 ? (
+                        <>{t('w2_title')}<br /><em>{t('w2_title_em')}</em></>
+                      ) : (
+                        p.title[lang]
+                      )}
                     </h3>
                     <span className="work-client">{p.catLabel[lang]}</span>
                   </div>
-                  <span className="work-link">{t(`w${p.id}_link`)}</span>
+                  <span className="work-link">{t(`w${p.id}_link`) || (lang === 'ru' ? 'Смотреть →' : 'Watch →')}</span>
                 </div>
               </article>
             ))}

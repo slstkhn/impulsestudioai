@@ -38,6 +38,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     work_cta: 'Все проекты',
     w1_tag: 'ВИДЕОВИЗИТКА', w1_title: 'Кухонная фабрика ', w1_client: 'Видеовизитка', w1_link: 'Смотреть →',
     w2_tag: 'Реклама', w2_title_em: 'GERMES', w2_title: 'Футбольный клуб ', w2_client: 'Реклама', w2_link: 'Смотреть →',
+    w999_tag: 'ИИ АВАТАРЫ', w999_link: 'Смотреть →',
     
     clients_label: 'КЛИЕНТЫ',
     clients_title_1: 'Наши ',
@@ -108,6 +109,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     work_all: 'All projects →', work_cta: 'All projects',
     w1_tag: 'PROMO', w1_title: 'Kitchen Factory ', w1_client: 'Promo', w1_link: 'View →',
     w2_tag: 'Commercial', w2_title_em: 'GERMES', w2_title: 'Football Club ', w2_client: 'Commercial', w2_link: 'View →',
+    w999_tag: 'AI AVATARS', w999_link: 'View →',
     
     clients_label: 'CLIENTS', clients_title_1: 'Our ', clients_title_em: 'clients',
     
@@ -179,7 +181,7 @@ export const projects: Project[] = [
     accent: '#ffffff',
     type: 'circuit',
     vimeoId: '1226050432',
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2013%20%D1%81%D0%B5%D0%BD%D1%82.%202026%20%D0%B3.,%2000_16_01.png?raw=true',
+    coverUrl: '/images/ai-avatars.png',
     description: {
       ru: 'Создаём ультрареалистичных ИИ Аватаров для бизнеса, личного блога и других задач.',
       en: 'We create ultra-realistic AI Avatars for business, personal blogs, and other tasks.'
@@ -188,7 +190,7 @@ export const projects: Project[] = [
   { id: 1,  title: { ru: 'Кухонная фабрика Becker', en: 'Becker Kitchen Factory' }, cat: 'video', year: 2025, catLabel: { ru: 'Реклама · Кухни',   en: 'Commercial · Kitchens'    }, grad: ['#1a1a2e','#2d1810'], accent: '#e8452c', type: 'circuit',
     // Вставьте сюда ID вашего загруженного видео с Vimeo
     vimeoId: '1211691292', // Замените на ваш ID
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.37.jpeg?raw=true',
+    coverUrl: '/images/becker.jpeg',
     description: {
       ru: 'Имиджевый коммерческий ролик для кухонной фабрики Becker. Главная задача — объединить эстетику, фотореализм и понятный визуальный нарратив. Проект реализован под ключ всего за 10 дней.',
       en: 'Commercial brand video for Becker Kitchen Factory. The main goal was to combine aesthetics, photorealism, and a clear visual narrative. Full production cycle completed in just 10 days.',
@@ -205,13 +207,13 @@ export const projects: Project[] = [
     grad: ['#0d1117','#1a1a2e'], 
     accent: '#8b7355', 
     type: 'frame', 
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.39.jpeg?raw=true',
+    coverUrl: '/images/germes.jpeg',
     description: {
       ru: 'Обуздай хищную энергию улиц в новой игровой форме FC Germes — раскрой внутри себя непокорного зверя.',
       en: 'Harness the predatory energy of the streets in the new FC Germes kit — unleash the untamed beast within.'
     }
   },
-  { id: 3,  title: { ru: 'Партия Новые люди',          en: 'New People Party'         }, cat: 'video', year: 2025, vimeoId: '1219493729', catLabel: { ru: 'Деморолик · Политика',       en: 'Demo reel · Politics'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust', coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2013.46.46.jpeg?raw=true' },
+  { id: 3,  title: { ru: 'Партия Новые люди',          en: 'New People Party'         }, cat: 'video', year: 2025, vimeoId: '1219493729', catLabel: { ru: 'Деморолик · Политика',       en: 'Demo reel · Politics'     }, grad: ['#1a0f0a','#2d1810'], accent: '#c9a961', type: 'dust', coverUrl: '/images/novye-lyudi.jpeg' },
   { 
     id: 13, 
     title: { ru: 'Строительная компания UNISON', en: 'UNISON Construction' }, 
@@ -222,7 +224,7 @@ export const projects: Project[] = [
     grad: ['#111111', '#222222'], 
     accent: '#d4af37', 
     type: 'grid',
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/photo_2026-08-27%2014.00.21.jpeg?raw=true',
+    coverUrl: '/images/unison.jpeg',
     description: {
       ru: 'Имиджевый рекламный ролик для строительной компании UNISON. Масштаб, надежность и современные технологии строительства, переданные через выразительный визуальный язык нейросетей.',
       en: 'Brand commercial for UNISON construction company. Scale, reliability, and modern construction technologies conveyed through the expressive visual language of neural networks.'
@@ -239,7 +241,7 @@ export const projects: Project[] = [
     grad: ['#0f2027','#1a3a4a'], 
     accent: '#7ec8a8', 
     type: 'bubble',
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2031%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2017_28_51.png?raw=true',
+    coverUrl: '/images/marketplace.png',
     description: {
       ru: 'Забудьте о сухости, жжении и усталости глаз: регенерирующий бальзам «Окопепт» быстро восстанавливает ткани и дарит ясность зрения без привыкания.',
       en: 'Forget about dryness, burning, and eye fatigue: the regenerating Okopept balm quickly restores tissues and provides clear vision without addiction.'
@@ -254,7 +256,7 @@ export const projects: Project[] = [
     grad: ['#2d1b3d','#5a3a7a'], 
     accent: '#ffc0cb', 
     type: 'splash', 
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2030%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2001_39_00.png?raw=true',
+    coverUrl: '/images/esimeta.png',
     vimeoId: '1222529463',
     description: {
       ru: 'Коллекция ярких промо-роликов с участием харизматичных персонажей — от продавца турецкого мороженого и пилота самолета до левитирующего монаха, — каждый из которых в оригинальной манере раскрывает преимущество мгновенного подключения eSim по всему миру с помощью узбекистанского оператора ESIMETA.<br/><br/><a href="https://www.instagram.com/esimeta.uz/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Instagram бренда</a>',
@@ -267,7 +269,7 @@ export const projects: Project[] = [
     cat: 'video', 
     year: 2026, 
     vimeoId: '1222386469',
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/alpha_futures_4x5.png?raw=true',
+    coverUrl: '/images/alpha-futures.png',
     catLabel: { ru: 'Реклама · Трейдинг', en: 'Commercial · Trading' }, 
     grad: ['#0a1628','#1a2a4a'], 
     accent: '#6ea8fe', 
@@ -288,7 +290,7 @@ export const projects: Project[] = [
     grad: ['#0f0a1a','#2a1a3d'], 
     accent: '#c49fff', 
     type: 'stars', 
-    coverUrl: 'https://github.com/slstkhn/imagesimages/blob/main/ChatGPT%20Image%2030%20%D0%B0%D0%B2%D0%B3.%202026%20%D0%B3.,%2017_16_37.png?raw=true',
+    coverUrl: '/images/utkonos.png',
     description: {
       ru: 'Символ сети — утка — зазывает зрителя в магазин «Утконос», где ожившие 3D-персонажи в индийских традиционных нарядах поэтапно произносят праздничное стихотворение, зажигательно поздравляя компанию и коллег с Новым годом.',
       en: 'The network mascot — a duck — invites the viewer to the Utkonos store, where animated 3D characters in traditional Indian outfits recite a festive poem, enthusiastically wishing the company and colleagues a Happy New Year.'
